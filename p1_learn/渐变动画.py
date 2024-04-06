@@ -1,8 +1,10 @@
 import pgzrun
 import pygame;
+import pgzero;
 
 clock = pygame.time.Clock()
 a =Actor("alien",(100,100),anchor=('left', 'top'));
+print(type(a._rect));
 
 #animate(a,pos=(300,300),duration=5);
 
@@ -14,6 +16,10 @@ def draw():
 def on_key_down(key):
     if key == keys.SPACE:
         print("Space key is pressed!")
+        image = a.image
+        rect = a.rect
+        print("Image:", image)
+        print("Rect:", rect)
 
 def on_key_up(key):
     if key == keys.SPACE:
